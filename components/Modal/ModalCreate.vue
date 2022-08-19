@@ -557,17 +557,17 @@ export default {
       this.resetValidation()
       for (const key of Object.keys(this.validation)) {
         if (!this.payload[key]) {
-          if (key === 'umur' && (!key || key <= 25)) {
-            this.validation.umur = true
+          if (key === 'alasanLain' && this.payload.alasan) {
+            continue
           } else {
             this.validation[key] = true
+            document.getElementById(key).scrollIntoView({
+              block: 'center',
+              inline: 'nearest',
+              behavior: 'smooth',
+            })
+            return
           }
-          document.getElementById(key).scrollIntoView({
-            block: 'center',
-            inline: 'nearest',
-            behavior: 'smooth',
-          })
-          return
         }
         if (key === 'umur' && this.payload.umur < 25) {
           this.validation.umur = true
