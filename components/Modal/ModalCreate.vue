@@ -432,7 +432,7 @@ export default {
       },
       optionsAlasan: optionsReason,
       acceptTermsCondition: false,
-      baseUrl: 'http://www.emsifa.com/api-wilayah-indonesia/api',
+      baseUrl: 'https://www.emsifa.com/api-wilayah-indonesia/api',
     }
   },
   watch: {
